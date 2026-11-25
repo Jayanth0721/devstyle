@@ -31,12 +31,12 @@ Run the installer script for your OS to install the CLI tools (`rtk` and `graphi
 
 ### Windows (PowerShell)
 ```powershell
-irm https://raw.githubusercontent.com/<YOUR_GITHUB_USERNAME>/devstyle/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/Jayanth0721/devstyle/main/install.ps1 | iex
 ```
 
 ### macOS & Linux (Bash / Zsh)
 ```bash
-curl -fsSL https://raw.githubusercontent.com/<YOUR_GITHUB_USERNAME>/devstyle/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/Jayanth0721/devstyle/main/install.sh | bash
 ```
 
 ---
