@@ -12,6 +12,8 @@ uv tool install graphify
 echo "=== Installing AI Agent Skills Globally ==="
 SKILLS=(
   "anthropics/skills@frontend-design"
+  "anthropics/skills@webapp-testing"
+  "upstash/context7"
   "obra/superpowers"
   "mattpocock/skills"
   "DietrichGebert/ponytail"
