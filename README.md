@@ -6,28 +6,28 @@
 
 ## Included Skills & Tools
 
-| Category | Skill / Tool | Source | Purpose |
-| :--- | :--- | :--- | :--- |
-| **Token & Context** | **RTK** | `rtk-ai/rtk` | Compresses terminal output by 60–90% |
-| **Token & Context** | **Caveman** | `JuliusBrussee/caveman` | Cuts agent output tokens by ~75% |
-| **Token & Context** | **Graphify** | `Graphify-Labs/graphify` | Maps codebases into a queryable knowledge graph |
-| **Workflow & Code** | **Superpowers** | `obra/superpowers` | Enforces brainstorm → plan → TDD → review workflows |
-| **Workflow & Code** | **Matt Pocock's Skills** | `mattpocock/skills` | `grill-me`, TDD, PRD planning, and engineering workflows |
-| **Workflow & Code** | **Ponytail** | `DietrichGebert/ponytail` | YAGNI & minimal-complexity senior engineer rules |
-| **Security** | **Cloudflare Security Audit** | `cloudflare/security-audit-skill` | Multi-phase security audit with verified findings |
-| **UI & Design** | **Frontend Design** | `anthropics/skills` | Anthropic's official high-craft frontend design skill |
-| **UI & Design** | **Impeccable** | `pbakaus/impeccable` | Design vocabulary (`polish`, `audit`, `critique`) & 60+ checks |
-| **UI & Design** | **Taste Skill** | `Leonxlnx/taste-skill` | Art direction, curated layouts, & browser visual verification |
-| **UI & Design** | **Hallmark** | `nutlope/hallmark` | Anti-AI-slop themes + `sloplint` verification |
-| **UI & Design** | **Unslop** | `heydamir/unslop` | Removes generic AI UI and copy patterns |
+| Sl. No. | Category | Skill / Tool | Source | Purpose |
+| :---: | :--- | :--- | :--- | :--- |
+| 1 | **Token & Context** | **RTK** | `rtk-ai/rtk` | Compresses terminal output by 60–90% |
+| 2 | **Token & Context** | **Caveman** | `JuliusBrussee/caveman` | Cuts agent output tokens by ~75% |
+| 3 | **Token & Context** | **Graphify** | `Graphify-Labs/graphify` | Maps codebases into a queryable knowledge graph |
+| 4 | **Token & Context** | **Context7** | `upstash/context7` | Fetches live, version-accurate library documentation |
+| 5 | **Workflow & Code** | **Superpowers** | `obra/superpowers` | Enforces brainstorm → plan → TDD → review workflows |
+| 6 | **Workflow & Code** | **Matt Pocock's Skills** | `mattpocock/skills` | `grill-me`, TDD, PRD planning, and engineering workflows |
+| 7 | **Workflow & Code** | **Ponytail** | `DietrichGebert/ponytail` | YAGNI & minimal-complexity senior engineer rules |
+| 8 | **Testing & QA** | **Webapp Testing** | `anthropics/skills` | Automated browser UI testing & visual verification |
+| 9 | **Security** | **Cloudflare Security Audit** | `cloudflare/security-audit-skill` | Multi-phase security audit with verified findings |
+| 10 | **UI & Design** | **Frontend Design** | `anthropics/skills` | Anthropic's official high-craft frontend design skill |
+| 11 | **UI & Design** | **Impeccable** | `pbakaus/impeccable` | Design vocabulary (`polish`, `audit`, `critique`) & 60+ checks |
+| 12 | **UI & Design** | **Taste Skill** | `Leonxlnx/taste-skill` | Art direction, curated layouts, & browser visual verification |
+| 13 | **UI & Design** | **Hallmark** | `nutlope/hallmark` | Anti-AI-slop themes + `sloplint` verification |
+| 14 | **UI & Design** | **Unslop** | `heydamir/unslop` | Removes generic AI UI and copy patterns |
 
 ---
 
 ## Option 1: One-Line Automated Installer (Recommended)
 
-Run the installer script for your OS to install the CLI tools (`rtk` and `graphify`), link all 10 skills globally across **Zed**, **Google Antigravity**, and **OpenCode**, and optionally configure **MotionSites.ai MCP**.
-
-*(Replace `<YOUR_GITHUB_USERNAME>` with your GitHub username after pushing `install.ps1` and `install.sh` to your repo).*
+Run the installer script for your OS to install the CLI tools (`rtk` and `graphify`), link all 12 agent skills globally across **Zed**, **Google Antigravity**, and **OpenCode**, and optionally configure **MotionSites.ai MCP**.
 
 ### Windows (PowerShell)
 ```powershell
@@ -47,6 +47,8 @@ In **Zed**, open **Agent Settings → Skills → Import from URL** and paste any
 
 * **Frontend Design (Anthropic):**
   `https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md`
+* **Webapp Testing (Anthropic):**
+  `https://github.com/anthropics/skills/blob/main/skills/webapp-testing/SKILL.md`
 * **Caveman (Output Compression):**
   `https://github.com/JuliusBrussee/caveman/blob/main/skills/caveman/SKILL.md`
 * **Unslop (Anti-AI UI Polish):**
@@ -72,6 +74,8 @@ winget install rtk-ai.rtk
 uv tool install graphify
 
 npx skills add anthropics/skills@frontend-design -g
+npx skills add anthropics/skills@webapp-testing -g
+npx skills add upstash/context7 -g
 npx skills add obra/superpowers -g
 npx skills add mattpocock/skills -g
 npx skills add DietrichGebert/ponytail -g
@@ -89,6 +93,8 @@ brew install rtk
 uv tool install graphify
 
 npx skills add anthropics/skills@frontend-design -g
+npx skills add anthropics/skills@webapp-testing -g
+npx skills add upstash/context7 -g
 npx skills add obra/superpowers -g
 npx skills add mattpocock/skills -g
 npx skills add DietrichGebert/ponytail -g
@@ -106,6 +112,8 @@ curl -fsSL https://raw.githubusercontent.com/rtk-ai/rtk/refs/heads/master/instal
 uv tool install graphify
 
 npx skills add anthropics/skills@frontend-design -g
+npx skills add anthropics/skills@webapp-testing -g
+npx skills add upstash/context7 -g
 npx skills add obra/superpowers -g
 npx skills add mattpocock/skills -g
 npx skills add DietrichGebert/ponytail -g
@@ -137,3 +145,25 @@ To add it to **Zed** without overwriting your existing settings, open your User 
   }
 }
 ```
+
+---
+
+## Quick Verification & Trigger Cheat Sheet
+
+| Sl. No. | Tool / Skill | How to Trigger / Verify | What It Does |
+| :---: | :--- | :--- | :--- |
+| 1 | **RTK** | Run `rtk gain` in terminal | Shows token compression savings |
+| 2 | **Caveman** | Type `/caveman` or `/ultracave` in chat | Switches replies to ultra-terse mode |
+| 3 | **Graphify** | Run `/graphify .` in your repo | Builds and queries your codebase graph |
+| 4 | **Context7** | Ask agent to *"use context7 docs for..."* | Pulls live, version-accurate library docs |
+| 5 | **Superpowers** | Ask agent to *"brainstorm and plan..."* | Enforces spec → plan → TDD → review |
+| 6 | **Matt Pocock** | Ask agent to `grill-me` on your plan | Stress-tests architecture & edge cases |
+| 7 | **Webapp Testing** | Ask agent to *"test the running app in browser"* | Launches browser checks & screenshots |
+| 8 | **Impeccable** | Ask agent to `audit`, `polish`, or `critique` UI | Runs 60+ UI/UX craft checks |
+| 9 | **Unslop / Hallmark** | Ask agent to `unslop` UI or run `sloplint` | Removes generic AI layout & copy patterns |
+| 10 | **Cloudflare Security** | Ask agent to *"run a security audit"* | Scans code for vulnerabilities |
+
+---
+
+## Author
+* **Jayanth** — [@Jayanth0721](https://github.com/Jayanth0721)
