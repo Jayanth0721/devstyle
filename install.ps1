@@ -5,6 +5,8 @@ uv tool install graphify
 Write-Host "`n=== Installing AI Agent Skills Globally ===" -ForegroundColor Cyan
 $skills = @(
     "anthropics/skills@frontend-design",
+    "anthropics/skills@webapp-testing",
+    "upstash/context7",
     "obra/superpowers",
     "mattpocock/skills",
     "DietrichGebert/ponytail",
